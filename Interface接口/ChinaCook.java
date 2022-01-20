@@ -1,5 +1,6 @@
 package Interface接口;
-
+//接口的实现
+//厨师实现顾客点的菜
 public class ChinaCook implements FoodMenu {
 
     public void shiZiChaoJiDan(){
