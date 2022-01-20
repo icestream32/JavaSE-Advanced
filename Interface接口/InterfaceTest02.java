@@ -3,6 +3,7 @@ public class InterfaceTest02 {
     //用于测试继承和实现同时存在的情况
     public static void main(String[] args) {
         //多态性
+        //接口没法自己建立对象只能绑定多态建立子对象
         Flyable c = new Cat();
         c.fly();
         Animal p = new Pig();
