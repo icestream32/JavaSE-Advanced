@@ -1,28 +1,51 @@
 package 数组小作业.用一维数组模拟栈;
-
+// 讲评版本，相比于之前写的少了for循环，关键是对于栈的理解还不够深，不知道栈帧这个概念
+// 还有就是一些值得注意的细节要注意
 public class MyStack {
     // 定义一个常量，用于确定栈的容量
      static final int LENGTH = 5;
 
     // 定义一个一维数组，模拟栈
-    private Object[] elements = new Object[LENGTH];
+    private Object[] elements;
 
+    // 定义一个栈帧，永远指向栈顶元素
+    private int index;
+    
     // 构造函数
+    // 推荐在构造函数这初始化实例变量
     public MyStack() {
-        
+
+        this.elements = new Object[LENGTH];
+        this.index = -1;
+    }
+    //setter and getter方法不论何时都要默认加
+    public int getIndex() {
+        return index;
     }
 
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    public Object[] getElements() {
+        return elements;
+    }
+
+    public void setElements(Object[] elements) {
+        this.elements = elements;
+    }
+
+    
     // push方法，用于压栈操作
     public void push(Object obj) {
-
-        if (elements[LENGTH - 1] != null) {
-            System.out.println("栈已满!");
+        //只要栈帧值为数组长度-1，则栈已满
+        if (index == elements.length - 1) {
+            System.out.println("压栈失败，栈已满!");
         } else {
-            for (int i = elements.length - 1; i > 0; i--) {
-                elements[i] = elements[i - 1]; 
-            }
-            elements[0] = obj;
-            System.out.println("压栈操作成功!");
+            //压栈操作
+            elements[++index] = obj;
+            System.out.print("压栈" + elements[index] + "成功！");
+            System.out.println("栈帧指向" + index);
         }
 
     }
@@ -30,46 +53,17 @@ public class MyStack {
     // pop方法，用于弹栈操作
     public Object pop(){
 
-        if (elements[0] == null) {
-            System.out.println("栈为空!");
+        if (index < 0) {
+            System.out.println("弹栈失败，栈为空!");
             return null;
         } else {
-            int i;
-            Object pop_obj = elements[0];
-            for (i = 0; i < elements.length - 1; i++) {
-                elements[i] = elements[i + 1];
-            }
-            elements[i] = null;
-            System.out.println("弹栈操作成功!");
-            return pop_obj;
+            //弹栈操作
+            Object object_pop = elements[index];
+            System.out.print("弹栈" + elements[index] + "成功！");
+            System.out.println("栈帧指向" + --index);
+            return object_pop;
         }
 
     }
 
-}
-class test{
-    public static void main(String[] args) {
-        
-        MyStack s = new MyStack();
-
-        String a1 = "123";
-        s.push(a1);
-        String a2 = "456";
-        s.push(a2);
-        String a3 = "789";
-        s.push(a3);
-        String a4 = "132";
-        s.push(a4);
-        String a5 = "246";
-        s.push(a5);
-        s.push(a5);
-
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-
-    }
-}
+} 
