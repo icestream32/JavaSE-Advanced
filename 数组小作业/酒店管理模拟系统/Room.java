@@ -1,8 +1,5 @@
 package 数组小作业.酒店管理模拟系统;
 
-import java.util.*;
-
-//新建一个类，用来模拟酒店中各个小房间
 public class Room {
 
     // 房间房号
@@ -15,11 +12,53 @@ public class Room {
     private boolean roomCondition = true;
 
     // 构造函数,设定房间参数
-    public Room(int roomId, String roomType) {
+    public Room(int roomId, String roomType, boolean roomCondition) {
         this.roomId = roomId;
         this.roomType = roomType;
+        this.roomCondition = roomCondition;
+    }
+    // setter and getter
+    public int getRoomId() {
+        return roomId;
     }
 
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
+    // 注意，布尔类型的变量get方法名称是isXxx()
+    public boolean isRoomCondition() {
+        return roomCondition;
+    }
+
+    public void setRoomCondition(boolean roomCondition) {
+        this.roomCondition = roomCondition;
+    }
+    
+    // 重写toString方法
+    // 返回房间状态信息，注意System.out.println打印输出的输出规则
+    public String toString() {
+        return "[房间号："+roomId+", 房间类型："+roomType+", 房间状态："+(roomCondition ? "空闲" : "占用")+"]";
+    }
+
+    // 重写equals方法
+    // 当房间号相等时，我们可以认为房间相等
+    public boolean equals(Object obj) { 
+        if (obj == null || !(obj instanceof Room)) return false;
+        if (this == obj) return true;
+
+        // 向下类型转换     
+        Room room = (Room)obj;
+        // 当前对象的房间编号等于传过来的房间编号，认为相等
+        return this.roomId == room.getRoomId();
+    }
     // 订房操作
     public void bookRoom() {
         if (!roomCondition) {
@@ -50,103 +89,14 @@ public class Room {
         }
 
     }
+    // 测试main方法，之后可以删除
+    /* public static void main(String[] args) {
 
-}
+        Room room1 = new Room(101, "豪华房", false);
+        Room room2 = new Room(101, "豪华房", false);
+        System.out.println(room1);
+        System.out.println(room1.equals(room2));
 
-class Test {
-
-    public static void main(String[] args) {
-
-        // 初始化酒店房间参数
-        Room room101 = new Room(101, "单人房");
-        Room room102 = new Room(102, "单人房");
-        Room room103 = new Room(103, "单人房");
-        Room room104 = new Room(104, "单人房");
-        Room room105 = new Room(105, "单人房");
-        Room room201 = new Room(201, "标准房");
-        Room room202 = new Room(202, "标准房");
-        Room room203 = new Room(203, "标准房");
-        Room room204 = new Room(204, "标准房");
-        Room room205 = new Room(205, "标准房");
-        Room room301 = new Room(301, "豪华房");
-        Room room302 = new Room(302, "豪华房");
-        Room room303 = new Room(303, "豪华房");
-        Room room304 = new Room(304, "豪华房");
-        Room room305 = new Room(305, "豪华房");
-
-        // 将房间信息放入二维数组，并提供一个查询二维数组
-        Room[][] rooms = {
-                { room101, room102, room103, room104, room105 },
-                { room201, room202, room203, room204, room205 },
-                { room301, room302, room303, room304, room305 }
-        };
-        int[][] roomNum = {
-                { 101, 102, 103, 104, 105 },
-                { 201, 202, 203, 204, 205 },
-                { 301, 302, 303, 304, 305 }
-        };
-
-        // 用户认证
-        System.out.print("请输入用户名与密码：");
-        try (Scanner s = new Scanner(System.in)) {
-            String userName = s.next();
-            String userPassword = s.next();
-            if ("admin".equals(userName) && "123".equals(userPassword)) {
-                System.out.println("登陆成功，欢迎登陆酒店管理系统！");
-            } else {
-                System.out.println("登陆失败，用户名不存在或密码错误！");
-                return;
-            }
-
-            // 令程序一直处于待机状态
-            while (true) {
-                System.out.println("请输入需要执行的操作。例如：订房、退房、查看房间信息");
-                String information = s.next();
-
-                // 订房操作
-                if ("订房".equals(information)) {
-                    System.out.print("请输入房间号：");
-                    int roomNumber = s.nextInt();
-                    for (int i = 0; i < roomNum.length; i++) {
-                        for (int j = 0; j < roomNum[i].length; j++) {
-                            if (roomNumber == roomNum[i][j]) {
-                                rooms[i][j].bookRoom();
-                                break;
-                            }
-                        }
-                    }
-                }
-
-                // 退房操作
-                if ("退房".equals(information)) {
-                    System.out.print("请输入房间号：");
-                    int roomNumber = s.nextInt();
-                    for (int i = 0; i < roomNum.length; i++) {
-                        for (int j = 0; j < roomNum[i].length; j++) {
-                            if (roomNumber == roomNum[i][j]) {
-                                rooms[i][j].checkOutRoom();
-                                break;
-                            }
-                        }
-                    }
-                }
-
-                // 打印房间信息
-                if ("查看房间信息".equals(information)) {
-                    System.out.print("请输入预定的房间号：");
-                    int roomNumber = s.nextInt();
-                    for (int i = 0; i < roomNum.length; i++) {
-                        for (int j = 0; j < roomNum[i].length; j++) {
-                            if (roomNumber == roomNum[i][j]) {
-                                rooms[i][j].printRoom();
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-    }
+    } */
 
 }
