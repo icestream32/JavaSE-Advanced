@@ -1,4 +1,4 @@
-package 一维数组;
+package 数组.一维数组;
 //用于测试一维数组的基础语法
 public class Test01 {
     /* 

@@ -1,4 +1,4 @@
-package 二维数组;
+package 数组.二维数组;
 //二维数组的基本使用
 public class Test {
     /*

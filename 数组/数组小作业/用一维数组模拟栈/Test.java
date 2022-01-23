@@ -1,4 +1,4 @@
-package 数组小作业.用一维数组模拟栈;
+package 数组.数组小作业.用一维数组模拟栈;
 
 public class Test {
     public static void main(String[] args) {

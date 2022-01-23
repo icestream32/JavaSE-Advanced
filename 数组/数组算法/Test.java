@@ -1,4 +1,4 @@
-package 数组算法;
+package 数组.数组算法;
 
 import java.util.*;
 

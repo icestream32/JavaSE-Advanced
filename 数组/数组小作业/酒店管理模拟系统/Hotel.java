@@ -1,4 +1,4 @@
-package 数组小作业.酒店管理模拟系统;
+package 数组.数组小作业.酒店管理模拟系统;
 
 public class Hotel {
     // 酒店功能的实现

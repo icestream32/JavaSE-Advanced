@@ -1,4 +1,4 @@
-package 一维数组;
+package 数组.一维数组;
 //用于测试main方法中的string[] 数组的作用
 public class Test02 {
     /* 
