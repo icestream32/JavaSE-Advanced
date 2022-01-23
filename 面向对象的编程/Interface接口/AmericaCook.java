@@ -1,4 +1,4 @@
-package 常用类.Interface接口;
+package 面向对象的编程.Interface接口;
 //接口的实现
 //厨师实现顾客点的菜
 public class AmericaCook implements FoodMenu {

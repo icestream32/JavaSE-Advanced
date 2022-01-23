@@ -1,4 +1,4 @@
-package 常用类.Object类.toString方法;
+package 面向对象的编程.Object类.toString方法;
 //用于学习toString()方法
 public class Test {
     /*

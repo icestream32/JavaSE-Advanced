@@ -1,4 +1,4 @@
-package 常用类.Interface接口;
+package 面向对象的编程.Interface接口;
 //接口在实际开发中的应用
 public class InterfaceTest03 {
     public static void main(String[] args) {

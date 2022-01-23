@@ -1,4 +1,4 @@
-package 常用类.Interface接口;
+package 面向对象的编程.Interface接口;
 //用于测试接口
 public class InterfaceTest01 {
     /*

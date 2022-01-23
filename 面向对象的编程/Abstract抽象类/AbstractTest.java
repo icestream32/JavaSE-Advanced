@@ -1,4 +1,4 @@
-package 常用类.Abstract抽象类;
+package 面向对象的编程.Abstract抽象类;
 //用于测试抽象类
 public class AbstractTest {
     /*
