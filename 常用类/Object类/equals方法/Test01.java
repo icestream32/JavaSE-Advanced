@@ -1,4 +1,4 @@
-package Object类.equals方法;
+package 常用类.Object类.equals方法;
 //用于学习equals()方法的使用
 public class Test01 {
     /*

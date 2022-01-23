@@ -1,4 +1,4 @@
-package Interface接口;
+package 常用类.Interface接口;
 
 interface Interface {
     //常量

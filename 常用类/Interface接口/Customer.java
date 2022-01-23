@@ -1,4 +1,4 @@
-package Interface接口;
+package 常用类.Interface接口;
 //接口的调用
 //顾客点菜
 public class Customer {

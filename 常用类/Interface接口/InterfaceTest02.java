@@ -1,4 +1,4 @@
-package Interface接口;
+package 常用类.Interface接口;
 public class InterfaceTest02 {
     //用于测试继承和实现同时存在的情况
     public static void main(String[] args) {

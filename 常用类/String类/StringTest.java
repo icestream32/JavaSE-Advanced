@@ -1,4 +1,4 @@
-package String类;
+package 常用类.String类;
 
 // 用于测试String类中的各种方法的使用
 public class StringTest {
