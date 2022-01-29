@@ -1,4 +1,4 @@
-package 集合;
+package 集合.Collection;
 // 集合的老祖宗Colletion的常用方法
 
 import java.util.ArrayList;
