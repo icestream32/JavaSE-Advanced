@@ -17,7 +17,7 @@ import java.util.List;
         泛型使得集合缺少多样性。
     但泛型被人们所接受的原因是因为在今后的开发中，集合中的数据类型一般都是一种
  */
-public class GenericTest {
+public class GenericTest01 {
     public static void main(String[] args) {
         
         // 创建一个集合对象，引用泛型
