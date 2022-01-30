@@ -9,7 +9,7 @@ public class CollectionTest04 {
     public static void main(String[] args) {
         
         // 创建集合对象
-        Collection c = new ArrayList();
+        Collection<Object> c = new ArrayList<>();
         // 往集合对象中添加元素
         c.add("s");
         String a = "s";
@@ -29,14 +29,14 @@ public class CollectionTest04 {
          */
 
         //  Iterator中的remove方法
-        Collection c2 = new ArrayList();
+        Collection<Object> c2 = new ArrayList<>();
         // Iterator it = c.iterator(); 不能在创建集合对象的时候就创建迭代器对象，此时集合中的元素为空
         c2.add(1);
         c2.add(2);
         c2.add(3);
         c2.add(4);
         // 创建迭代器对象
-        Iterator it2 = c2.iterator();
+        Iterator<Object> it2 = c2.iterator();
         // 遍历
         while (it2.hasNext()) {
             // c2.remove(it2.next()); 不能在集合中删除，会出现异常：java.util.ConcurrentModificationException

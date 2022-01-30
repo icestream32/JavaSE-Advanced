@@ -22,7 +22,7 @@ public class CollectionTest01 {
     public static void main(String[] args) {
 
         // Collection是接口不能实例化对象，需要利用多态性调用
-        Collection c = new ArrayList();
+        Collection<Object> c = new ArrayList<>();
         // 基本数据类型在集合中以包装类的形式存在
         // 自动装箱
         c.add(1200);

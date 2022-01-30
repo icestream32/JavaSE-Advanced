@@ -19,7 +19,7 @@ public class ListTest01 {
     public static void main(String[] args) {
         
         // 定义一个List接口
-        List myList = new ArrayList();
+        List<Object> myList = new ArrayList<>();
         // 添加元素
         myList.add("A");
         myList.add("B");
@@ -29,7 +29,7 @@ public class ListTest01 {
         // void add​(int index, E element)
         // 往集合的下标位置添加元素
         myList.add(1,"KING");
-        Iterator it = myList.iterator();
+        Iterator<Object> it = myList.iterator();
         while (it.hasNext()) {
             System.out.print(it.next() + " "); // A KING B C D
         }

@@ -13,7 +13,7 @@ ArrayList特殊构造方法
 public class ArrayTest02 {
     public static void main(String[] args) {
         
-        Collection s = new HashSet();
+        Collection<Object> s = new HashSet<>();
         s.add(1);
         s.add(2);
         s.add(3);
@@ -21,7 +21,7 @@ public class ArrayTest02 {
         s.add(5);
 
         // 转换成ArrayList集合
-        ArrayList s1 = new ArrayList(s);
+        ArrayList<Object> s1 = new ArrayList<>(s);
         for (int i = 0; i < s1.size(); i++) {
             System.out.println(s1.get(i));
         }

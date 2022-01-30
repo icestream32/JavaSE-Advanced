@@ -25,14 +25,14 @@ public class CollectionTest02 {
                 如果操作引发异常，则不指定迭代器的后续行为。 
      */
     public static void main(String[] args) {
-        Collection c = new ArrayList();
+        Collection<Object> c = new ArrayList<>();
         c.add(true);
         c.add("jjjj");
         c.add("23456");
         c.add(2135);
 
         // 创建一个迭代器对象
-        Iterator it = c.iterator();
+        Iterator<Object> it = c.iterator();
         // 遍历集合
         while (it.hasNext()) {
             System.out.println(it.next());

@@ -17,7 +17,7 @@ public class LinkedListTest01 {
         至于LinkedList集合中的方法，基本上和ArrayList差不多
         其他区别可以查阅帮助文档
          */
-        List list = new LinkedList();
+        List<Object> list = new LinkedList<>();
         list.add("e");
 
     }

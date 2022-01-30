@@ -6,12 +6,12 @@ import java.util.Collection;
 // 深入研究Collection接口当中的contains方法
 public class CollectionTest03 {
     public static void main(String[] args) {
-        Collection c = new ArrayList();
+        Collection<Object> c = new ArrayList<>();
         c.add("abc");
         String s1 = "abc";
         String s2 = "def";
         // 以下代码输出什么？
-        System.out.println(c.contains(s1)); // true
+        System.out.println(c.contains(s1) + s2); // true
         /*
         contains方法底层的代码调用的是equals方法
         因此在和String类型比较时，实际上调用的是equals方法

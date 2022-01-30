@@ -31,7 +31,7 @@ public class ArrayListTest01 {
     public static void main(String[] args) {
         
         // 创建一个ArrayList对象,长度默认为10
-        List list = new ArrayList();
+        List<Object> list = new ArrayList<>();
         // 注意，size方法是当前集合中所含有元素的个数，而不是ArrayList的长度
         // 往数组末尾添加元素效率比较高
         list.add(1);
