@@ -24,7 +24,8 @@ ArrayList集合：
         这么多的集合中，你用哪个集合最多？
         答：ArrayList集合。
         因为往数组末尾添加元素，效率不受影响
-        另外，我们检索/查找某个元素的操作比较多。        
+        另外，我们检索/查找某个元素的操作比较多。  
+    9.ArrayList是非线程安全的集合。      
  */
 public class ArrayListTest01 {
     public static void main(String[] args) {
