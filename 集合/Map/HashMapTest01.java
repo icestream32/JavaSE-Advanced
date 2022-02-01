@@ -27,7 +27,7 @@ HashMap集合：
         详情请见文件：哈希表数据结构.png
         从哈希表数据结构知，在进行增删和检索操作时，要频繁用到hashCode方法和equals方法，因此在存储一般对象时，需要重写hashCode和equals算法。
  */
-public class HashMapTest {
+public class HashMapTest01 {
     public static void main(String[] args) {
         Map<Integer,String> hashMap = new HashMap<>();
         System.out.println(hashMap); // 默认输出{}
