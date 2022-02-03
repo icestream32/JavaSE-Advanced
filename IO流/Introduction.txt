@@ -71,6 +71,9 @@ O:Output
     对象专属流：
         java.io.ObjectInputStream
         java.io.ObjectOutputStream
+
+7.File类
+
         
 
 
