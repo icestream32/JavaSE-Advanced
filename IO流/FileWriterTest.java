@@ -15,6 +15,8 @@ public class FileWriterTest {
             fw = new FileWriter("IO流/fileWrite",true);
             fw.write(chars);
             fw.write("\n");
+            // 程序结束需要刷新通道（总是忘记加！！！）
+            fw.flush();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
