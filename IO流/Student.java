@@ -1,6 +1,9 @@
 package IO流;
 
-public class Student {
+import java.io.Serializable;
+
+// 序列化所在的类必须要实现Serializable接口
+public class Student implements Serializable {
     
     private String name;
 
