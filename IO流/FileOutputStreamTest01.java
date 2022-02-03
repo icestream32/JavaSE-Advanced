@@ -27,6 +27,9 @@ public class FileOutputStreamTest01 {
             byte[] bt = s.getBytes();
             fos.write(bt);
 
+            // 输出流在结束之后一定要刷新，不然就会丢失数据！
+            fos.flush();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
