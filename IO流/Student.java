@@ -7,8 +7,14 @@ public class Student implements Serializable {
     // Java虚拟机看到Serializable接口之后，会自动生成一个序列化版本号。
     // 如果没有手动写出来，Java虚拟机会默认提供这个序列化版本号。
     // 建议将序列化版本号手动的写出来。不建议自动生成
-    private static final long serialVersionUID = 1L;
+    // private static final long serialVersionUID = 1L;
+    // VS Code需要设置版本号警告来自动生成固定版本号
     
+    /**
+     * VS Code自动生成版本号
+     */
+    private static final long serialVersionUID = 6070669330428475873L;
+
     private String name;
 
     // 如果过了很久，Student这个类源代码改动了。
