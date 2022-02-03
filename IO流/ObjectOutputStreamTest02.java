@@ -18,7 +18,7 @@ public class ObjectOutputStreamTest02 {
         list.add(new Student("wangwu"));
         ObjectOutputStream oos = null;
         try {
-            oos = new ObjectOutputStream(new FileOutputStream("students"));
+            oos = new ObjectOutputStream(new FileOutputStream("IO流/students"));
             oos.writeObject(list);
             oos.flush();
         } catch (FileNotFoundException e) {
