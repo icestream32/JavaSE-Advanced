@@ -42,7 +42,7 @@ public class FileInputStreamTest02 {
 
             // 简洁的代码
             int readCount = 0;
-            while ((readCount != file.read(bytes))) {
+            while ((readCount = file.read(bytes)) != -1) {
                 System.out.print(new String(bytes,0,readCount));
             }
 
