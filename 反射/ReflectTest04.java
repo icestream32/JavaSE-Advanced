@@ -1,15 +1,18 @@
 package 反射;
 
-/* import java.lang.reflect.Field; */
+import java.lang.reflect.Constructor;
+
+import java.lang.reflect.Field;
 
 // 该例用于Field属性中的访问操作
 // 注意：反射机制让代码复杂了，但是为了一个“灵活”，这也是值得的
 public class ReflectTest04 {
     public static void main(String[] args) throws Exception {
         
-        /* // 使用反射机制，访问一个对象的属性。（set get）
+        // 使用反射机制，访问一个对象的属性。（set get）
         Class<?> studentClass = Class.forName("反射.bean.Student");
-        Object obj = studentClass.newInstance();
+        Constructor<?> constructor = studentClass.getConstructor();
+        Object obj = constructor.newInstance();
 
         // 获取number属性（根据属性的名称来获取Field）
         Field numField = studentClass.getDeclaredField("number");
@@ -31,7 +34,7 @@ public class ReflectTest04 {
         nameField.set(obj, "zhangsan");
 
         // 读name属性的值
-        System.out.println(nameField.get(obj)); */
+        System.out.println(nameField.get(obj));
 
 
     }
